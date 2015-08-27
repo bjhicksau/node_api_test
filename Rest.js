@@ -7,7 +7,7 @@ function REST_ROUTER(router,connection,md5) {
 
 REST_ROUTER.prototype.handleRoutes= function(router,connection,md5) {
     router.get("/",function(req,res){
-        res.json({"Message" : "Hello World. We have changed to V 1.3 node commit !"});
+        res.json({"Message" : "Hello World. We have changed to V 1.4 for franco test !"});
     })
     router.post("/users",function(req,res){
         var query = "INSERT INTO ??(??,??) VALUES (?,?)";
@@ -33,7 +33,7 @@ REST_ROUTER.prototype.handleRoutes= function(router,connection,md5) {
                 }
             });
         });
-    
+
         router.get("/users/:user_id",function(req,res){
             var query = "SELECT * FROM ?? WHERE ??=?";
             var table = ["user_login","user_id",req.params.user_id];
